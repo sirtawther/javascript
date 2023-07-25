@@ -1,11 +1,27 @@
-const button = document.querySelector("button")
+function clickMe() {
 
-function sumTwoNumber() {
-    const num1 = prompt("Type num1: ")
-    const num2 = prompt("Type num2: ")
-    const output = Number(num1)+Number(num2)
-    document.getElementById("info").innerHTML = `You are adding ${num1} with ${num2}.`
-    document.getElementById("header").innerHTML = `Output result is ${output}.`
+    while (true) {
+        let userName = prompt("Who is there?")
+        if (userName == "Admin") {
+            let password = prompt("Password")
+            if (password != "TheMaster") {
+                alert("Wrong Password")
+
+            } else {
+                alert("Welcome")
+                break
+            }
+
+        }
+
+        else if (userName.trim() == "") {
+            alert("Cancelled")
+        }
+        else {
+            alert("I don't know you!")
+        }
+    }
+
 }
+addEventListener("click", clickMe)
 
-addEventListener("click",sumTwoNumber)
