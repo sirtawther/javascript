@@ -1,11 +1,9 @@
-const button = document.querySelector("button")
+const  x = +prompt("What is x?");
+const n = +prompt("What is n?");
+const result = document.querySelector("#result")
 
-function sumTwoNumber() {
-    const num1 = prompt("Type num1: ")
-    const num2 = prompt("Type num2: ")
-    const output = Number(num1)+Number(num2)
-    document.getElementById("info").innerHTML = `You are adding ${num1} with ${num2}.`
-    document.getElementById("header").innerHTML = `Output result is ${output}.`
+function pow(x,n) {
+    return x ** n
 }
 
-addEventListener("click",sumTwoNumber)
+result.textContent = pow(x,n)
