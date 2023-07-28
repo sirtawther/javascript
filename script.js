@@ -1,10 +1,7 @@
-let num1 = prompt("what is number 1?");
-let num2 = prompt("what is number 2");
+let age = prompt("What is your age?");
 
-let addTwoNumbers = (num1,num2) => {
-    return num1+num2
-}
+let drink = age >= 18 ? 
+    (name) => alert(`${name}, You are allowed to drink`) :
+    (name) => alert(`${name}, You are not allowed to drink`)
 
-alert(addTwoNumbers(2,2))
-
-
+drink("Mg Mg")
