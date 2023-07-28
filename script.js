@@ -1,11 +1,10 @@
-const button = document.querySelector("button")
+let num1 = prompt("what is number 1?");
+let num2 = prompt("what is number 2");
 
-function sumTwoNumber() {
-    const num1 = prompt("Type num1: ")
-    const num2 = prompt("Type num2: ")
-    const output = Number(num1)+Number(num2)
-    document.getElementById("info").innerHTML = `You are adding ${num1} with ${num2}.`
-    document.getElementById("header").innerHTML = `Output result is ${output}.`
+let addTwoNumbers = (num1,num2) => {
+    return num1+num2
 }
 
-addEventListener("click",sumTwoNumber)
+alert(addTwoNumbers(2,2))
+
+
