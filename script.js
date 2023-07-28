@@ -7,26 +7,23 @@ let output = document.querySelector("#output")
 button.addEventListener("click", runProgram)
 function runProgram() {
     let number = parseInt(input.value)
-    let result = ""
-    output.innerHTML = ""
+    let result = isNaN(number) ? alert("Type a number") :
 
-    if (isNaN(number)) {
+        output.innerHTML = ""
 
-        alert("Type a number")
 
-    } else {
-        for (let i = 1; i <= number; i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
-                result += "FizzBuzz" + "<br>"
-            } else if (i % 3 == 0) {
-                result += "Fizz" + "<br>"
-            } else if (i % 5 == 0) {
-                result += "Buzz" + "<br>"
-            }
-            else {
-                result += i + "<br>"
-            }
+    for (let i = 1; i <= number; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            result += "FizzBuzz" + "<br>"
+        } else if (i % 3 == 0) {
+            result += "Fizz" + "<br>"
+        } else if (i % 5 == 0) {
+            result += "Buzz" + "<br>"
         }
+        else {
+            result += i + "<br>"
+        }
+
 
         output.innerHTML = result
 
