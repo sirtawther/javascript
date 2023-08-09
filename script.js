@@ -1,11 +1,26 @@
-const button = document.querySelector("button")
+let calculate_button = document.querySelector("#calculate")
+let clear_button = document.querySelector("#clear")
 
-function sumTwoNumber() {
-    const num1 = prompt("Type num1: ")
-    const num2 = prompt("Type num2: ")
-    const output = Number(num1)+Number(num2)
-    document.getElementById("info").innerHTML = `You are adding ${num1} with ${num2}.`
-    document.getElementById("header").innerHTML = `Output result is ${output}.`
-}
+let message = ""
 
-addEventListener("click",sumTwoNumber)
+calculate_button.addEventListener("click", () => {
+
+
+    for (let i=1; i < 10; i++) {
+        message += `${i} x ${i} = ${i*i} <br>`
+    }
+    
+    message += "Finished"
+
+
+    document.getElementById("result").innerHTML =message
+})
+
+
+clear_button.addEventListener("click", () => {
+    document.getElementById("result").innerHTML = ""
+    message = ""
+})
+
+
+
