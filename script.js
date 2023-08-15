@@ -1,11 +1,23 @@
-const button = document.querySelector("button")
+const addButton = document.querySelector("button#addButton")
+const clearButton = document.querySelector("button#clearButton")
 
-function sumTwoNumber() {
-    const num1 = prompt("Type num1: ")
-    const num2 = prompt("Type num2: ")
-    const output = Number(num1)+Number(num2)
-    document.getElementById("info").innerHTML = `You are adding ${num1} with ${num2}.`
-    document.getElementById("header").innerHTML = `Output result is ${output}.`
+const div = document.createElement("div")
+
+const container = document.querySelector("#container")
+
+addButton.addEventListener("click",addNewDiv )
+
+
+function addNewDiv() {
+    div.style.cssText = "width:200px;height:200px;background:green;"
+    
+    container.appendChild(div)
+
 }
 
-addEventListener("click",sumTwoNumber)
+clearButton.addEventListener("click",clearDiv)
+
+function clearDiv() {
+    container.removeChild(container.lastElementChild) 
+}
+
