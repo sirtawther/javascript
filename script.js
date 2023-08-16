@@ -1,11 +1,27 @@
-const button = document.querySelector("button")
+const para1 = document.createElement("p")
+const h3 = document.createElement("h3")
 
-function sumTwoNumber() {
-    const num1 = prompt("Type num1: ")
-    const num2 = prompt("Type num2: ")
-    const output = Number(num1)+Number(num2)
-    document.getElementById("info").innerHTML = `You are adding ${num1} with ${num2}.`
-    document.getElementById("header").innerHTML = `Output result is ${output}.`
-}
 
-addEventListener("click",sumTwoNumber)
+const container = document.querySelector("#container")
+
+para1.setAttribute("style","color:red;")
+h3.setAttribute("style","color:blue;")
+
+para1.textContent = "Hey I am Red"
+h3.textContent = "Hey I am Blue"
+
+container.appendChild(para1)
+container.appendChild(h3)
+
+
+const div = document.createElement("div")
+const h1 = document.createElement("h1")
+const para2 = document.createElement("p")
+
+h1.textContent = "I’m in a div"
+para2.textContent = "Me too"
+
+container.appendChild(div)
+div.appendChild(h1)
+div.appendChild(para2)
+
